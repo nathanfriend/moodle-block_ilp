@@ -230,7 +230,7 @@ if (!empty($studentslist)) {
                 $notcountedentries = $dbc->count_report_entries_with_state($r->id, $student->id, ILP_STATE_NOTCOUNTED);
                 $createdentries     =   $createdentries     -   $notcountedentries;
 
-                $reporttext         =   $achievedentries . "/" . $createdentries . " " . get_string('achieved', 'block_ilp');
+                $reporttext =  "<a href='{$CFG->wwwroot}/blocks/ilp/actions/view_main.php?user_id={$student->id}{$course_param}&selectedtab=6&tabitem=6' >".$achievedentries . "/" . $createdentries . " " . get_string('achieved', 'block_ilp')."</a>";
             }
             
         	
